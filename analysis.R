@@ -143,7 +143,7 @@ ts_decomposition_inla <- function(forecast_year, fcode.select, dsname=ds2){
   
     mutate(year=lubridate::year(date),
            fcode=fcode.select) %>%
-    #filter(year==forecast_year) %>%
+    filter(year==forecast_year) %>%
     saveRDS( paste0('./output/baseline_', forecast_year,'_',fcode.select,'.rds'))
   
   # lin.pred <- mod1$summary.linear.predictor[,c('mean','sd')]%>%
