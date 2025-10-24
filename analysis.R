@@ -169,6 +169,8 @@ for(i in 2025:max(ds$year)){
   }
 }
 
+
+##Check baseline
 ds.out <- readRDS('./output/baseline_2025_ED_AN_GIANG_AN_PHU_DISTRICT.rds') %>%
   mutate(base_cases = exp(mean_log_baseline),
           base_case_2sd =  exp(mean_log_baseline+2*sd_log_baseline), #ucl based on uncertainty intevral
